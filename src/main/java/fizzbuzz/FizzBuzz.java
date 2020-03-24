@@ -2,17 +2,20 @@ package fizzbuzz;
 
 public class FizzBuzz {
 
-	public FizzBuzz() {
-
-	}
-
 	public String fizzBuzz(int number) {
-		if (number == 3) {
-			return "Fizz";
-		} else if (number == 5) {
-			return "Buzz";
-		} else {
-			return Integer.toString(number);
+		String result = "";
+		
+		if (number % 3 == 0) {
+			result += "Fizz";
 		}
+		
+		if (number % 5 == 0) {
+			result += "Buzz";
+		}
+		
+		if (result.isEmpty()) {
+			result = Integer.toString(number);
+		}
+		return result;
 	}
 }

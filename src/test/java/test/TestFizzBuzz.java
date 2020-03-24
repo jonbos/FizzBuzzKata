@@ -22,7 +22,21 @@ public class TestFizzBuzz {
 		assertEquals("Fizz", fb.fizzBuzz(3));
 	}
 	@Test
-	public void testFizzBuzzShouldReturnBuzzWhenInputIsMultipleOfFive() {
+	public void testFizzBuzzShouldReturnFizzWhenInputIsMultipleOfThree() {
+		assertEquals("Fizz", fb.fizzBuzz(9));
+	}
+	@Test
+	public void testFizzBuzzShouldReturnBuzzWhenInputIsFive() {
 		assertEquals("Buzz", fb.fizzBuzz(5));
 	}
+	@Test
+	public void testFizzBuzzShouldReturnBuzzWhenInputIsMultipleOfFive() {
+		assertEquals("Buzz", fb.fizzBuzz(10));
+	}
+	@Test
+	public void testFizzBuzzShouldReturnFizzBuzzWhenInputIsMultipleOfThreeAndFive() {
+		assertEquals("FizzBuzz", fb.fizzBuzz(15));
+	}
+	
+
 }
