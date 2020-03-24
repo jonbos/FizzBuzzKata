@@ -37,6 +37,10 @@ public class TestFizzBuzz {
 	public void testFizzBuzzShouldReturnFizzBuzzWhenInputIsMultipleOfThreeAndFive() {
 		assertEquals("FizzBuzz", fb.fizzBuzz(15));
 	}
+	@Test
+	public void testFizzBuzzPopShouldReturnPopWhenNumberIsSeven() {
+		assertEquals("Pop", fb.fizzBuzz(7));
+	}
 	
 
 }

@@ -9,6 +9,7 @@ public class FizzBuzz {
 	public FizzBuzz() {
 		rules.put(3, "Fizz");
 		rules.put(5, "Buzz");
+		rules.put(7, "Pop");
 	}
 
 	public String fizzBuzz(int number) {
