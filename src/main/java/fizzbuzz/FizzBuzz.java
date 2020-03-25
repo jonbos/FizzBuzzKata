@@ -1,27 +1,25 @@
 package fizzbuzz;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FizzBuzz {
-	Map<Integer, String> rules = new HashMap<Integer, String>();
-	
+	private List<Rule> rules = new ArrayList<>();
+
 	public FizzBuzz() {
-		rules.put(3, "Fizz");
-		rules.put(5, "Buzz");
-		rules.put(7, "Pop");
+		rules.add(new Rule((x) -> x % 3 == 0, "Fizz", ""));
+		rules.add(new Rule((x) -> x % 5 == 0, "Buzz", ""));
+		rules.add(new Rule((x) -> x % 7 == 0, "Pop", ""));
 	}
 
 	public String fizzBuzz(int number) {
-		
+
 		String result = "";
 
-		for (Map.Entry<Integer, String> rule: rules.entrySet()) {
-			if (number % rule.getKey() == 0) {
-				result += rule.getValue();
-			}
+		for (Rule rule : rules) {
+			result += rule.apply(number);
 		}
-		
+
 		if (result.isEmpty()) {
 			result = Integer.toString(number);
 		}
