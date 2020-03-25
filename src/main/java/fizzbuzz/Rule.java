@@ -13,10 +13,12 @@ public class Rule {
 		this.match = match;
 		this.noMatch = noMatch;
 	}
+
+	public Rule() {
+	}
+
 	public String apply(int number) {
 		return condition.apply(number) ? match : noMatch;
-	}
-	public Rule() {
 	}
 
 	public Function<Integer, Boolean> getCondition() {

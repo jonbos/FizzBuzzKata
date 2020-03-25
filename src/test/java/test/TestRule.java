@@ -16,7 +16,26 @@ public class TestRule {
 	@Test
 	public void testRuleConditionCanBeImplementedAsLambda() {
 		Rule rule = new Rule();
-		rule.setCondition((x) -> x==1);
+		rule.setCondition((x) -> x == 1);
 		assertTrue(rule.getCondition().apply(1));
 	}
+
+	@Test
+	public void testRuleReturnsMatchWhenRuleMatches() {
+		Rule rule = new Rule();
+		rule.setCondition((x) -> x == 1);
+		String expected = "match";
+		rule.setMatch(expected);
+		assertEquals(expected, rule.apply(1));
+	}
+
+	@Test
+	public void testRuleReturnsNoMatchWhenNoRuleMatch() {
+		Rule rule = new Rule();
+		rule.setCondition((x) -> x == 1);
+		String expected = "no match";
+		rule.setNoMatch(expected);
+		assertEquals(expected, rule.apply(2));
+	}
+
 }
