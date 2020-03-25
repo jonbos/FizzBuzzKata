@@ -4,13 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import fizzbuzz.FizzBuzz;
+import fizzbuzz.CountingGame;
 
-public class TestFizzBuzz {
-	private FizzBuzz fb;
+public class TestCountingGame {
+	private CountingGame fb;
 	@Before
 	public void setUp() throws Exception {
-		fb = new FizzBuzz();
+		fb = new CountingGame();
 	}
 
 	@Test

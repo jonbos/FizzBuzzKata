@@ -3,10 +3,10 @@ package fizzbuzz;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FizzBuzz {
+public class CountingGame {
 	private List<Rule> rules = new ArrayList<>();
 
-	public FizzBuzz() {
+	public CountingGame() {
 		rules.add(new Rule((x) -> x % 3 == 0, "Fizz", ""));
 		rules.add(new Rule((x) -> x % 5 == 0, "Buzz", ""));
 		rules.add(new Rule((x) -> x % 7 == 0, "Pop", ""));

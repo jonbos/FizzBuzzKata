@@ -17,7 +17,7 @@ public class Rule {
 	public Rule() {
 	}
 
-	public String apply(int number) {
+	public String applyRule(int number) {
 		return condition.apply(number) ? match : noMatch;
 	}
 
