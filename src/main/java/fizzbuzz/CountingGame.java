@@ -7,9 +7,6 @@ public class CountingGame {
 	private List<Rule> rules = new ArrayList<>();
 
 	public CountingGame() {
-		rules.add(new Rule((x) -> x % 3 == 0, "Fizz", ""));
-		rules.add(new Rule((x) -> x % 5 == 0, "Buzz", ""));
-		rules.add(new Rule((x) -> x % 7 == 0, "Pop", ""));
 	}
 
 	public String fizzBuzz(int number) {
@@ -17,12 +14,20 @@ public class CountingGame {
 		String result = "";
 
 		for (Rule rule : rules) {
-			result += rule.apply(number);
+			result += rule.applyRule(number);
 		}
 
 		if (result.isEmpty()) {
 			result = Integer.toString(number);
 		}
 		return result;
+	}
+
+	public List<Rule> getRules() {
+		return rules;
+	}
+
+	public void setRules(List<Rule> rules) {
+		this.rules = rules;
 	}
 }

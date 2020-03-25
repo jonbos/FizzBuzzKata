@@ -26,7 +26,7 @@ public class TestRule {
 		rule.setCondition((x) -> x == 1);
 		String expected = "match";
 		rule.setMatch(expected);
-		assertEquals(expected, rule.apply(1));
+		assertEquals(expected, rule.applyRule(1));
 	}
 
 	@Test
@@ -35,7 +35,7 @@ public class TestRule {
 		rule.setCondition((x) -> x == 1);
 		String expected = "no match";
 		rule.setNoMatch(expected);
-		assertEquals(expected, rule.apply(2));
+		assertEquals(expected, rule.applyRule(2));
 	}
 
 }

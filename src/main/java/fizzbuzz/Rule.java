@@ -3,6 +3,7 @@ package fizzbuzz;
 import java.util.function.Function;
 
 public class Rule {
+	
 	private Function<Integer, Boolean> condition;
 	private String match;
 	private String noMatch;
