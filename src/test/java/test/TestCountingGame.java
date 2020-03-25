@@ -65,16 +65,39 @@ public class TestCountingGame {
 
 		assertEquals("Pop", game.play(7));
 	}
+	@Test
+	public void testFizzBuzzPopShouldReturnPopWhenNumberIsMultipleOfSeven() {
+		game = GameFactory.getFizzBuzzPopGame();
+
+		assertEquals("Pop", game.play(7*2));
+		assertEquals("Pop", game.play(7*11));
+
+	}
+	
+
 	
 	@Test public void testFizzBuzzPopShouldReturnFizzPopWhenNumberIsMultipleOfThreeAndSeven() {
 		game = GameFactory.getFizzBuzzPopGame();
 
 		assertEquals("FizzPop", game.play(7*3));
+		assertEquals("FizzPop", game.play(7*3*11));
+
 
 	}
+	@Test public void testFizzBuzzPopShouldReturnBuzzPopWhenNumberIsMultipleOfFiveAndSeven() {
+		game = GameFactory.getFizzBuzzPopGame();
+
+		assertEquals("BuzzPop", game.play(5*7));
+		assertEquals("BuzzPop", game.play(5*7*11));
+
+
+	}
+
 	@Test public void testFizzBuzzPopShouldReturnFizzBuzzPopWhenNumberIsMultipleOfThreeFiveAndSeven() {
 		game = GameFactory.getFizzBuzzPopGame();
 
 		assertEquals("FizzBuzzPop", game.play(7*3*5));
+		assertEquals("FizzBuzzPop", game.play(7*3*5*11));
+
 	}
 }
