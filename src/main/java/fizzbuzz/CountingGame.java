@@ -9,7 +9,7 @@ public class CountingGame {
 	public CountingGame() {
 	}
 
-	public String fizzBuzz(int number) {
+	public String play(int number) {
 
 		String result = "";
 
