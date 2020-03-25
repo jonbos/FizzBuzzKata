@@ -24,6 +24,8 @@ public class TestFizzBuzz {
 	@Test
 	public void testFizzBuzzShouldReturnFizzWhenInputIsMultipleOfThree() {
 		assertEquals("Fizz", fb.fizzBuzz(9));
+		assertEquals("Fizz", fb.fizzBuzz(12));
+		assertEquals("Fizz", fb.fizzBuzz(33));
 	}
 	@Test
 	public void testFizzBuzzShouldReturnBuzzWhenInputIsFive() {
@@ -32,6 +34,8 @@ public class TestFizzBuzz {
 	@Test
 	public void testFizzBuzzShouldReturnBuzzWhenInputIsMultipleOfFive() {
 		assertEquals("Buzz", fb.fizzBuzz(10));
+		assertEquals("Buzz", fb.fizzBuzz(500));
+		assertEquals("Buzz", fb.fizzBuzz(25));
 	}
 	@Test
 	public void testFizzBuzzShouldReturnFizzBuzzWhenInputIsMultipleOfThreeAndFive() {
@@ -41,6 +45,4 @@ public class TestFizzBuzz {
 	public void testFizzBuzzPopShouldReturnPopWhenNumberIsSeven() {
 		assertEquals("Pop", fb.fizzBuzz(7));
 	}
-	
-
 }
