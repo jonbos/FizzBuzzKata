@@ -8,6 +8,13 @@ public class CountingGame {
 
 	public CountingGame() {
 	}
+	
+	
+	public CountingGame(List<Rule> rules) {
+		super();
+		this.rules = rules;
+	}
+
 
 	public String play(int number) {
 
@@ -16,7 +23,7 @@ public class CountingGame {
 		for (Rule rule : rules) {
 			result += rule.applyRule(number);
 		}
-
+		// Number does not match any of the game rules, so just return the number
 		if (result.isEmpty()) {
 			result = Integer.toString(number);
 		}
