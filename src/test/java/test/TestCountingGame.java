@@ -18,6 +18,13 @@ public class TestCountingGame {
 	public void testFizzBuzzShouldReturnNumber() {
 		game = GameFactory.getFizzBuzzGame();
 		assertEquals("1", game.play(1));
+		assertEquals("2", game.play(2));
+		assertEquals("4", game.play(4));
+		// Big prime
+		assertEquals("991", game.play(991));
+
+		
+
 	}
 
 	@Test
