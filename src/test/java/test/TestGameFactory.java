@@ -37,5 +37,4 @@ public class TestGameFactory {
 		CountingGame fizzBuzzPop = GameFactory.getFizzBuzzPopGame();
 		assertEquals(fizzBuzzPop.getRules().size(), 3);
 	}
-
 }
