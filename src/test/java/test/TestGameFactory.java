@@ -10,11 +10,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fizzbuzz.CountingGame;
-import fizzbuzz.GameFactory;
+import fizzbuzz.CountingGameFactory;
 import fizzbuzz.Rule;
 
 public class TestGameFactory {
-	private GameFactory factory;
+	private CountingGameFactory factory;
 
 	@Before
 	public void setUp() throws Exception {
@@ -22,19 +22,19 @@ public class TestGameFactory {
 
 	@Test
 	public void testCreatesGameWithNoRulesWhenPassedNoArgs() {
-		CountingGame game = GameFactory.getGame();
+		CountingGame game = CountingGameFactory.getGame();
 		assertEquals(0, game.getRules().size());
 	}
 
 	@Test
 	public void testShouldCreateFizzBuzzGameWithTwoRules() {
-		CountingGame fizzBuzz = GameFactory.getFizzBuzzGame();
+		CountingGame fizzBuzz = CountingGameFactory.getFizzBuzzGame();
 		assertEquals(fizzBuzz.getRules().size(), 2);
 	}
 
 	@Test
 	public void testShouldCreateFizzBuzzPopGameWithThreeRules() {
-		CountingGame fizzBuzzPop = GameFactory.getFizzBuzzPopGame();
+		CountingGame fizzBuzzPop = CountingGameFactory.getFizzBuzzPopGame();
 		assertEquals(fizzBuzzPop.getRules().size(), 3);
 	}
 }

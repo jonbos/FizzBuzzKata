@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 import fizzbuzz.CountingGame;
-import fizzbuzz.GameFactory;
+import fizzbuzz.CountingGameFactory;
 
 public class TestCountingGame {
 	private CountingGame game;
@@ -16,7 +16,7 @@ public class TestCountingGame {
 
 	@Test
 	public void testFizzBuzzShouldReturnNumber() {
-		game = GameFactory.getFizzBuzzGame();
+		game = CountingGameFactory.getFizzBuzzGame();
 		assertEquals("1", game.play(1));
 		assertEquals("2", game.play(2));
 		assertEquals("4", game.play(4));
@@ -29,14 +29,14 @@ public class TestCountingGame {
 
 	@Test
 	public void testFizzBuzzShouldReturnFizzWhenInputIsThree() {
-		game = GameFactory.getFizzBuzzGame();
+		game = CountingGameFactory.getFizzBuzzGame();
 
 		assertEquals("Fizz", game.play(3));
 	}
 
 	@Test
 	public void testFizzBuzzShouldReturnFizzWhenInputIsMultipleOfThree() {
-		game = GameFactory.getFizzBuzzGame();
+		game = CountingGameFactory.getFizzBuzzGame();
 
 		assertEquals("Fizz", game.play(9));
 		assertEquals("Fizz", game.play(12));
@@ -45,14 +45,14 @@ public class TestCountingGame {
 
 	@Test
 	public void testFizzBuzzShouldReturnBuzzWhenInputIsFive() {
-		game = GameFactory.getFizzBuzzGame();
+		game = CountingGameFactory.getFizzBuzzGame();
 
 		assertEquals("Buzz", game.play(5));
 	}
 
 	@Test
 	public void testFizzBuzzShouldReturnBuzzWhenInputIsMultipleOfFive() {
-		game = GameFactory.getFizzBuzzGame();
+		game = CountingGameFactory.getFizzBuzzGame();
 
 		assertEquals("Buzz", game.play(10));
 		assertEquals("Buzz", game.play(500));
@@ -61,21 +61,21 @@ public class TestCountingGame {
 
 	@Test
 	public void testFizzBuzzShouldReturnFizzBuzzWhenInputIsMultipleOfThreeAndFive() {
-		game = GameFactory.getFizzBuzzGame();
+		game = CountingGameFactory.getFizzBuzzGame();
 
 		assertEquals("FizzBuzz", game.play(3 * 5));
 	}
 
 	@Test
 	public void testFizzBuzzPopShouldReturnPopWhenNumberIsSeven() {
-		game = GameFactory.getFizzBuzzPopGame();
+		game = CountingGameFactory.getFizzBuzzPopGame();
 
 		assertEquals("Pop", game.play(7));
 	}
 
 	@Test
 	public void testFizzBuzzPopShouldReturnPopWhenNumberIsMultipleOfSeven() {
-		game = GameFactory.getFizzBuzzPopGame();
+		game = CountingGameFactory.getFizzBuzzPopGame();
 
 		assertEquals("Pop", game.play(7 * 2));
 		assertEquals("Pop", game.play(7 * 11));
@@ -84,7 +84,7 @@ public class TestCountingGame {
 
 	@Test
 	public void testFizzBuzzPopShouldReturnFizzPopWhenNumberIsMultipleOfThreeAndSeven() {
-		game = GameFactory.getFizzBuzzPopGame();
+		game = CountingGameFactory.getFizzBuzzPopGame();
 
 		assertEquals("FizzPop", game.play(7 * 3));
 		assertEquals("FizzPop", game.play(7 * 3 * 11));
@@ -93,7 +93,7 @@ public class TestCountingGame {
 
 	@Test
 	public void testFizzBuzzPopShouldReturnBuzzPopWhenNumberIsMultipleOfFiveAndSeven() {
-		game = GameFactory.getFizzBuzzPopGame();
+		game = CountingGameFactory.getFizzBuzzPopGame();
 
 		assertEquals("BuzzPop", game.play(5 * 7));
 		assertEquals("BuzzPop", game.play(5 * 7 * 11));
@@ -102,7 +102,7 @@ public class TestCountingGame {
 
 	@Test
 	public void testFizzBuzzPopShouldReturnFizzBuzzPopWhenNumberIsMultipleOfThreeFiveAndSeven() {
-		game = GameFactory.getFizzBuzzPopGame();
+		game = CountingGameFactory.getFizzBuzzPopGame();
 
 		assertEquals("FizzBuzzPop", game.play(7 * 3 * 5));
 		assertEquals("FizzBuzzPop", game.play(7 * 3 * 5 * 11));
